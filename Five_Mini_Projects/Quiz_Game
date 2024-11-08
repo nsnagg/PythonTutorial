@@ -1,0 +1,40 @@
+print("Welcome to my Quiz Game")
+playing = input("Do you want to play? ")
+
+if playing != "yes":
+    quit()
+
+print("Ok! Let's Play :")
+
+c_score = 0
+i_score = 0
+
+answer = input("What does CPU stand for? ")
+if answer == "central processing unit":
+    print("Correct!")
+    c_score += 1
+else:
+    print("Try Again...")
+    i_score += 1
+
+answer = input("What does 'IP' stand for? ")
+if answer == "internet protocol":
+    print("Correct!")
+    c_score += 1
+else:
+    print("Try Again...")
+    i_score += 1
+
+answer = input("What does 'ARP' stand for? ")
+if answer == "address resolusion protocol":
+    print("Correct!")
+    c_score += 1
+else:
+    print("Try Again...")
+    i_score += 1
+
+avg = ((c_score/(c_score + i_score)) * 100)
+print(f"{avg} %")
+print(f"You got {c_score} out of {i_score+c_score} questions corect")
+
+again = input("Do you want to play again?   ")
